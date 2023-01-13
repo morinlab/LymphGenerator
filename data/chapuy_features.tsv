@@ -1,0 +1,159 @@
+Name	Description
+ACTB	Mutation
+B2M	Mutation
+BCL10	Mutation
+BCL11A	Mutation
+BCL2	Mutation
+BCL6	Mutation
+BRAF	Mutation
+BTG1	Mutation
+BTG2	Mutation
+CARD11	Mutation
+CCND3	Mutation
+CD58	Mutation
+CD70	Mutation
+CD79B	Mutation
+CD83	Mutation
+CIITA	Mutation
+CREBBP	Mutation
+DOCK1	Mutation
+DTX1	Mutation
+EBF1	Mutation
+EEF1A1	Mutation
+EP300	Mutation
+ETS1	Mutation
+ETV6	Mutation
+EZH2	Mutation
+FAS	Mutation
+GABRA2	Mutation
+GNA13	Mutation
+GNAI2	Mutation
+GRHPR	Mutation
+HIST1H1B	Mutation
+HIST1H1C	Mutation
+HIST1H1D	Mutation
+HIST1H1E	Mutation
+HIST1H2AC	Mutation
+HIST1H2AM	Mutation
+HIST1H2BC	Mutation
+HIST1H2BK	Mutation
+HIST1H3B	Mutation
+HIST2H2BE	Mutation
+HLA-A	Mutation
+HLA-B	Mutation
+HLA-C	Mutation
+HVCN1	Mutation
+IGLL5	Mutation
+IKZF3	Mutation
+IRF8	Mutation
+KLHL6	Mutation
+KMT2D	Mutation
+LTB	Mutation
+LYN	Mutation
+MAP2K1	Mutation
+MEF2B	Mutation
+MYD88	Mutation
+NFKBIA	Mutation
+NFKBIE	Mutation
+NLRP8	Mutation
+NOTCH2	Mutation
+PDE4DIP	Mutation
+PIM1	Mutation
+POU2AF1	Mutation
+POU2F2	Mutation
+PRDM1	Mutation
+PRKCB	Mutation
+PTEN	Mutation
+PTPN6	Mutation
+RHOA	Mutation
+SF3B1	Mutation
+SGK1	Mutation
+SIN3A	Mutation
+SPEN	Mutation
+STAT3	Mutation
+STAT6	Mutation
+TBL1XR1	Mutation
+TLR2	Mutation
+TMEM30A	Mutation
+TMSB4X	Mutation
+TNFAIP3	Mutation
+TNFRSF14	Mutation
+TOX	Mutation
+TP53	Mutation
+UBE2A	Mutation
+ZC3H12A	Mutation
+ZEB2	Mutation
+ZFP36L1	Mutation
+11p:AMP	CN gain
+11q:AMP	CN gain
+11q23.3:AMP	CN gain
+12p:AMP	CN gain
+12p12.1:AMP	CN gain
+12q:AMP	CN gain
+13q:AMP	CN gain
+13q31.3:AMP	CN gain
+17q24.3:AMP	CN gain
+18p:AMP	CN gain
+18q:AMP	CN gain
+18q21.33(BCL2):AMP	CN gain
+19q:AMP	CN gain
+19q13.42:AMP	CN gain
+1q:AMP	CN gain
+1q23.3:AMP	CN gain
+1q32.1:AMP	CN gain
+21q:AMP	CN gain
+2p16.1:AMP	CN gain
+3p:AMP	CN gain
+3q:AMP	CN gain
+3q28:AMP	CN gain
+5p:AMP	CN gain
+5q:AMP	CN gain
+6p:AMP	CN gain
+6p21.1:AMP	CN gain
+7p:AMP	CN gain
+7q:AMP	CN gain
+7q22.1:AMP	CN gain
+8q24.22:AMP	CN gain
+9p24.1:AMP	CN gain
+9q:AMP	CN gain
+10q23.31:DEL	CN loss
+12p13.2:DEL	CN loss
+13q14.2:DEL	CN loss
+13q34:DEL	CN loss
+14q32.31:DEL	CN loss
+15q15.3:DEL	CN loss
+16q12.1:DEL	CN loss
+17p:DEL	CN loss
+17p11.2:DEL	CN loss
+17q25.1:DEL	CN loss
+18q23:DEL	CN loss
+19p13.2:DEL	CN loss
+19p13.3:DEL	CN loss
+19q13.32:DEL	CN loss
+1p13.1:DEL	CN loss
+1p31.1:DEL	CN loss
+1p36.11:DEL	CN loss
+1p36.32:DEL	CN loss
+1q42.12:DEL	CN loss
+2q22.2:DEL	CN loss
+3p21.31:DEL	CN loss
+3q28:DEL	CN loss
+4q21.22:DEL	CN loss
+4q35.1:DEL	CN loss
+6p21.33:DEL	CN loss
+6q:DEL	CN loss
+6q14.1:DEL	CN loss
+6q14.3:DEL	CN loss
+6q21:DEL	CN loss
+6q23.3:DEL	CN loss
+8q12.1:DEL	CN loss
+9p21.3:DEL	CN loss
+9q21.13:DEL	CN loss
+SV:TP63	SV
+SV:BCL2	SV
+SV:BCL6	SV
+SV:MYC	SV
+SV:CD274/PDCD1LG2	SV
+SV:TBL1XR1	SV
+SV:CIITA	SV
+SV:ETV6	SV
