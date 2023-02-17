@@ -4,6 +4,7 @@ library(ggtree)
 library(umap)
 # Main packages
 library(GAMBLR)
+library(GAMBLR.predict)
 library(NMF)
 library(ComplexHeatmap)
 library(data.table)
@@ -382,7 +383,7 @@ hmrn_features <- read_tsv("data/hmrn_features.tsv") %>%
 
 mutsig_genes <-
     read_tsv(
-      "data/clustering_genomes_all/clustering_genomes_all.sig_genes.txt"
+      "data/clustering_genomes_all.sig_genes.txt"
     ) %>%
     dplyr::filter(q<=0.1) %>%
     select(Gene=gene) %>%
@@ -1452,7 +1453,7 @@ ch6 <- ComplexHeatmap::Heatmap(
 
 
 cairo_pdf(
-    "results/Dconstruct.pdf",
+    "results/LymphGenerator.pdf",
     width = 17,
     height = 22
 )
@@ -1645,7 +1646,7 @@ arranged_plots_pairwise <- sapply(
     )
 
 cairo_pdf(
-    file = "results/Dcounstruct_fisher.pdf",   # The directory you want to save the file in
+    file = "results/LymphGenerator_fisher.pdf",   # The directory you want to save the file in
     width = 10,
     height = 7.5,
     onefile = TRUE
@@ -1873,7 +1874,7 @@ ch6_relevel <- ComplexHeatmap::Heatmap(
   )
 
 cairo_pdf(
-    "results/Dconstruct_relevel.pdf",
+    "results/LymphGenerator_relevel.pdf",
     width = 17,
     height = 22
 )
@@ -1892,10 +1893,10 @@ dev.off()
 anno_col_2 %>%
     translate_cluster(
         "cluster",
-        "Dconstruct_label"
+        "LymphGenerator_label"
     ) %>%
     as.data.frame %>%
-    write_tsv("results/Dconstruct_labels.tsv")
+    write_tsv("results/LymphGenerator_labels.tsv")
 
 ########################################################
 ######### Exploratory plots ############################
