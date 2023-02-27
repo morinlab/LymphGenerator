@@ -547,16 +547,24 @@ predict_dlbcl <- function(
           this_prediction <- (samples_in_question[i, ] %>% pull(Class))
 
           # what are the features important for that class?
-          this_prediction_important_feat <- as.data.frame(
-                  h2o.varimp(
-                          list_of_base_models[[this_prediction]]
+          this_prediction_important_feat <-
+            pairwise_comparisons_all[[this_prediction]][["fisher"]] %>%
+            filter(estimate > 1, q.value<0.1) %>%
+            filter(gene %in%
+                  (as.data.frame(
+                    h2o.varimp(
+                      list_of_base_models[[this_prediction]]
+                    )
+                  ) %>%
+                  arrange(
+                     desc(relative_importance)
+                  ) %>%
+                  pull(variable)
                   )
-              ) %>%
-              arrange(
-                  desc(relative_importance)
-              ) %>% 
-              head(10) %>%
-              pull(variable)
+            ) %>%
+            arrange(desc(estimate)) %>%
+            head(10) %>%
+            pull(gene)
 
           # what are the features from the class top-10 are in this sample?
           these_features <- rownames(
@@ -743,13 +751,15 @@ write_tsv(
     )
 
 # What are the features that decrease the performance of the model?
-kick_out <- metrics %>%
+kick_out <- c(metrics %>%
     filter(
         Logloss < h2o.logloss(ensemble),
         MSE < h2o.mse(ensemble)
     ) %>%
     arrange(Logloss) %>%
-    pull(Feature)
+    pull(Feature),
+    "FCGR2B_SV"
+)
 
 # Drop these features from the data
 optimized_train.data <- train.data %>%
