@@ -16,7 +16,7 @@ plot_roc <- function(
         response_column = "cluster_name",
         negref # reference label
     ){
-    
+
     # training
     XXX <- h2o.performance(h2o_rf_model)
     metrics <- XXX@metrics[["thresholds_and_metric_scores"]]
@@ -198,7 +198,7 @@ plot_votes <- function(
 # initialize H2O
 localH2O <- h2o.init(
     ip="localhost",
-    port = 54321, 
+    port = 54321,
     startH2O = TRUE,
     nthreads=-1
 )
@@ -657,12 +657,12 @@ predictions <- data.frame(
         Confidence = numeric(),
         Feature = character(),
         stringsAsFactors = FALSE
-    ) 
+    )
 
 
 # Analyze all features
 for(this_feature in colnames(dataregression %>% select(-cluster_name))){
-    
+
     message(
         paste0(
           "Processing:",
