@@ -1,3 +1,4 @@
+library(GAMBLR)
 library(caret)
 library(glmnet)
 library(tidyverse)
@@ -360,10 +361,11 @@ d_ezb <- my_nj$tip.label %>%
   )
 
 tree_ezb <- left_join(
-        my_nj,
+        as.tibble(my_nj),
         d_ezb,
         by = c("label" = "Tumor_Sample_Barcode")
-    )
+    ) %>%
+    treeio::as.treedata()
 
 phylo_plot_ezb <- ggtree::ggtree(
         tree_ezb,
@@ -421,10 +423,11 @@ d_st2 <- my_nj$tip.label %>%
     )
 
 tree_st2 <- left_join(
-    my_nj,
-    d_st2,
-    by = c("label" = "Tumor_Sample_Barcode")
-)
+        as.tibble(my_nj),
+        d_st2,
+        by = c("label" = "Tumor_Sample_Barcode")
+    )%>%
+        treeio::as.treedata()
 
 phylo_plot_st2 <- ggtree::ggtree(
         tree_st2,
