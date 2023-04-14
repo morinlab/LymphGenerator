@@ -656,7 +656,7 @@ sv_binary <- sv_binary %>%
   left_join(collated_data %>% select(-MYC_SV),
             by = 'Tumor_Sample_Barcode',
             suffix = c(".X", ".Y")) %>%
-  na_if(., 0) %>%
+  mutate(across(where(is.numeric), ~na_if(., 0))) %>%
   split.default(gsub('.[XY]', '', names(.))) %>%
   map_dfc( ~ if (ncol(.x) == 1)
     .x
@@ -1995,10 +1995,11 @@ d <- my_nj$tip.label %>%
         )
 
 tree <- left_join(
-        my_nj,
+        as.tibble(my_nj),
         d,
         by=c('label' = "Tumor_Sample_Barcode")
-    )
+    ) %>%
+    treeio::as.treedata()
 
 phylo_plot <- ggtree(
         tree,
