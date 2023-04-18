@@ -94,7 +94,8 @@ plot_roc <- function(
           family = "Arial"
       ) +
       theme_Morons() +
-      ylim(0,1)
+      ylim(0,1) +
+      ggtitle(negref)
 
     return(my_roc_plot)
 
